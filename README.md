@@ -1,7 +1,7 @@
 
-## Build
+## Build and push
 ```shell
-docker build -t md2pdf .
+docker build -t yeszao/topdf:0.1 .
 ```
 This command will create a docker image name `md2pdf`.
 
