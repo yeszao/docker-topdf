@@ -15,6 +15,9 @@ RUN pip install markdown2pdf
 COPY fonts/* /usr/share/fonts/
 RUN fc-cache -fv
 
+# Add detault custom style file
+COPY css/ /css
+
 # Fix markdown2pdf syntax error
 RUN sed -i "s/print css_file/print(css_file)/g" /usr/local/lib/python3.9/site-packages/markdown2pdf/__init__.py
 

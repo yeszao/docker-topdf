@@ -1,14 +1,24 @@
 ## Usage
 1. Install Docker and start it.
-2. Transfer `mycv.md` to `mycv.pdf`.
+2. Transfer `mycv.md` to `mycv.pdf` with one of the following command:
 ```shell
+# without any stylesheet
 docker run -i --rm --volume $(pwd):/work --workdir /work yeszao/topdf md2pdf mycv.md
+
+# with topdf comes with stylesheet
+docker run -i --rm --volume $(pwd):/work --workdir /work yeszao/topdf md2pdf mycv.md --theme=/css/cv.css
+
+# with completely custom stylesheet
 docker run -i --rm --volume $(pwd):/work --workdir /work yeszao/topdf md2pdf mycv.md --theme=style.css
 ```
 Where,
 - `yeszao/topdf` is the docker image name.
 - `md2pdf` is the python plugin `md2pdf` installed in the docker image, we can use it directly.
-- We recommend [naming alias for this command](#set-command-alias).
+- `--theme` use custom style sheet. You can:
+    - let it blank,
+    - using `topdf` comes with style `/css/cv.css`,
+    - or any other stylesheet placed in a current directory, here is `style.css`.
+- For convenience, we recommend [naming alias for this command](#set-command-alias).
 
 
 ## Set command alias
@@ -34,10 +44,10 @@ alias topdf='docker run -i --rm --volume $(pwd):/work --workdir /work yeszao/top
 2. Create another file name `alias.reg`, content:
 ```shell
 Windows Registry Editor Version 5.00
-
 [HKEY_CURRENT_USER\Software\Microsoft\Command Processor]
 "AutoRun"="%USERPROFILE%\\alias.bat"
 ```
+
 3. Double click `alias.reg` file, you can now use the `topdf` command on the CMD:
 
 
@@ -58,6 +68,6 @@ docker login --username <username>
 ```
 Build the image and push it to hub.docker.com:
 ```shell
-docker build -t yeszao/topdf -t yeszao/topdf:0.1 .
+docker build -t yeszao/topdf -t yeszao/topdf:0.2 .
 docker push yeszao/topdf --all-tags
 ```

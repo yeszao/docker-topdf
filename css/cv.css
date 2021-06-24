@@ -1,0 +1,101 @@
+* {
+    font-size: 12px;
+    color: #333;
+    font-weight: 400;
+    font-family: 'Times New Roman', 'Hiragino Sans GB', 'Microsoft YaHei', 'sans-serif';
+}
+
+b, strong {font-weight: 700}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Arial', 'Times New Roman', 'FZHei-B01S', 'sans-serif';
+	border: none;
+	margin-bottom: 0.5rem;
+}
+
+h1, h2, h3, h4, h5, h2 a, h3 a, h3 strong, h3 b {
+	color: #007ea5;
+}
+
+blockquote{
+	margin-left: 0;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 0.2rem;
+}
+
+h1 + blockquote p {
+	text-align: center;
+	line-height: 0.8rem;
+	margin-bottom: 2rem;
+}
+
+h1 + blockquote p a {
+	text-decoration: underline;
+	margin-left: .4rem;
+	color: #555;
+	font-size: 0.9rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	border-bottom: 1px solid #eee;
+}
+
+/* 技能两列显示 */
+h2:nth-of-type(2) + ul {
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+}
+
+h3 {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 4px;
+}
+
+h3 strong, h3 b {
+	float: right;
+    font-weight: 400;
+}
+
+p, ul li {
+    line-height: 1.75;
+}
+
+body > ul > li, body > ul > li {
+	list-style: disc;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+ul > li {
+	margin-left: 0;
+}
+
+ul > li > ul > li {
+	margin-left: 1rem;
+}
+
+p {margin-bottom: 0;}
+
+
+ul {
+	margin: 0;
+	padding: 0 0 0 1rem;
+}
+
+ul li {
+	list-style-type: desc;
+	list-style-position: outside;
+}
+
