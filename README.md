@@ -26,7 +26,7 @@ Where,
 After naming alias, you can use it like this:
 ```shell
 topdf mycv.md
-topdf mycv.md --theme=style.css
+topdf mycv.md --theme=/css/cv.css
 ```
 
 ### Mac OS X or Linux
